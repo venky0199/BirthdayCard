@@ -17,7 +17,7 @@ img {
 .ballon {
     position: fixed;
     height: 180px;
-    top: 50px;
+    top: 15px;
     right: 20px;
 }
 
@@ -38,8 +38,8 @@ img {
 
 .birthdayCard {
     position: relative;
-    width: 20%;
-    height: 90%;
+    width: 200px;
+    height: 300px;
     cursor: pointer;
     transform-style: preserve-3d;
     transform: perspective(2500px);
