@@ -6,7 +6,7 @@ body {
 }
 
 img {
-    width : 90px;
+    width: 90px;
 }
 
 .star {
@@ -28,12 +28,10 @@ img {
     height: 150px;
 }
 
-
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .birthdayCard {
@@ -45,33 +43,21 @@ img {
     transform: perspective(2500px);
     transition: 4s;
     margin-top: 20%;
-    
 }
 
-.birthdayCard:hover {
+.birthdayCard.open {
     transform: perspective(2500px) rotate(0deg);
     box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .15), 0 10px 100px rgba(0, 0, 0, 0.3);
 }
 
-
-.birthdayCard:hover .cardFront {
+.birthdayCard.open .cardFront {
     transform: rotateY(-160deg);
-    
 }
 
-.birthdayCard:hover .front-text {
-    display: none;
-}
-
-.birthdayCard:hover .wrap-deco {
-    display: none;
-}
-
-.birthdayCard:hover .wrap-decoTwo {
-    display: none;
-}
-
-.birthdayCard:hover .plate {
+.birthdayCard.open .front-text,
+.birthdayCard.open .wrap-deco,
+.birthdayCard.open .wrap-decoTwo,
+.birthdayCard.open .plate {
     display: none;
 }
 
@@ -89,7 +75,7 @@ img {
 .happy,
 .toyou {
     position: relative;
-    font-family: didot;
+    font-family: Didot, serif;
     text-align: center;
     backface-visibility: hidden;
     font-size: 30px;
@@ -105,7 +91,7 @@ img {
 
 .bday {
     position: relative;
-    font-family: arial;
+    font-family: Arial, sans-serif;
     font-size: 35px;
     text-align: center;
     top: 163px;
@@ -234,7 +220,6 @@ img {
     left: 64px;
 }
 
-
 .flame {
     position: absolute;
     background-color: #fb5607;
@@ -278,9 +263,9 @@ img {
 }
 
 p {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .name {
