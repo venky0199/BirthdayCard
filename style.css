@@ -44,7 +44,7 @@ img {
     transform-style: preserve-3d;
     transform: perspective(2500px);
     transition: 4s;
-    margin-left: 7%;
+    margin-left: 5.5%;
 }
 
 .birthdayCard:hover {
