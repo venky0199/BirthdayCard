@@ -43,6 +43,7 @@ img {
     transform: perspective(2500px);
     transition: 4s;
     margin-top: 20%;
+     margin-right: 10%;
 }
 
 .birthdayCard.open {
