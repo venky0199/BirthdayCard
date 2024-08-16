@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate QR Code</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        .qr-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #qrcode {
+            margin-top: 20px;
+        }
+
+        .qr-text {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #007BFF;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .qr-text:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="qr-container">
+        <h2>Enter text or URL to generate QR Code:</h2>
+        <input type="text" id="text" placeholder="Enter your text or link" style="width: 300px; padding: 5px;">
+        <button onclick="generateQRCode()">Generate QR Code</button>
+        <div id="qrcode"></div>
+        <p id="qr-link" class="qr-text" style="display:none;" onclick="openLink()">Click here to open the link</p>
+    </div>
+
+    <script>
+        function generateQRCode() {
+            const text = document.getElementById("text").value;
+            const qrCodeContainer = document.getElementById("qrcode");
+            qrCodeContainer.innerHTML = ""; // Clear previous QR code
+            new QRCode(qrCodeContainer, text);
+
+            // Show clickable link if a URL is entered
+            if (text.startsWith("http://") || text.startsWith("https://")) {
+                const qrLink = document.getElementById("qr-link");
+                qrLink.style.display = "block";
+                qrLink.textContent = "Click here to open the link";
+                qrLink.setAttribute("data-link", text);
+            } else {
+                document.getElementById("qr-link").style.display = "none";
+            }
+        }
+
+        function openLink() {
+            const link = document.getElementById("qr-link").getAttribute("data-link");
+            window.open(link, "_blank");
+        }
+    </script>
+</body>
+</html>
