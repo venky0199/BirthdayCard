@@ -43,7 +43,7 @@ img {
     transform: perspective(2500px);
     transition: 4s;
     margin-top: 20%;
-     margin-right: 10%;
+    margin-right: 10%;
 }
 
 .birthdayCard.open {
@@ -272,4 +272,28 @@ p {
 .name {
     margin-left: 150px;
     margin-top: -15px;
+}
+
+.click-here {
+    position: relative;
+    top: 30px; /* Adjust this value to position it correctly under "Bro" */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+}
+.birthdayCard:hover .click-here {
+    display: none; /* Hides "Click Here!" when the card is opened */
+}
+.happy,
+.bday,
+.toyou
+
+{
+    margin: 10;
+}
+.front-text {
+    position: relative;
+    text-align: center;
+
 }
